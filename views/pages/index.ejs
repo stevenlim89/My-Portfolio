@@ -185,16 +185,17 @@
                         next = pictures[i].nextElementSibling;
                     }
                     
+                    pictures[i].className = 'noDisplay';
+                    pictures[i].style.display = 'none';
+                    
                     $(next).removeClass('noDisplay');
                     $(next).transition({
                         animation: 'fade',
                         duration: '1s',
-                        hidden: 'hidden',
-                        displayType: 'block'
+                        hidden: 'hidden'
                     });
                     
-                    pictures[i].className = 'noDisplay';
-                    pictures[i].style.display = 'none';
+                    
                     break;
                 }
             }
