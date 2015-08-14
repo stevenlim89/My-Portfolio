@@ -166,14 +166,15 @@
         menuItem.on('click', handler.activate);
 
         // end of extraction to partial
-
+        var imageList = document.getElementById('imageList');
+        var pictures = imageList.getElementsByTagName('img');
+         var next = pictures[0];
         setInterval(function () { carousel() }, 7000);
 
         function carousel() {
-            var imageList = document.getElementById('imageList');
-            var pictures = imageList.getElementsByTagName('img');
+            
         
-            var next = pictures[0];
+           
 
             for (var i = 0; i < pictures.length; i++) {
                 if (!$(pictures[i]).hasClass("noDisplay")) {
