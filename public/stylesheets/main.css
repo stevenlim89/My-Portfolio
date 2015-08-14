@@ -8,11 +8,11 @@ body, html{
 }
 
 .ui.secondary.pointing.menu{
-    
+
 }
 
 .ui.secondary.pointing.menu .active{
-    color: #8b9dc3 !important;
-    border-color: #8b9dc3 !important
+    color: #3399FF !important;
+    border-color: #3399FF !important
 }
 
