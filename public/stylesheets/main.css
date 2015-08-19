@@ -25,11 +25,10 @@ body, html{
     position: absolute; 
     color: white; 
     padding-top: 80px; 
-    margin-left: -41%; 
+    margin-left: -41%;
     z-index: 2000; 
     width: 80%; 
     height: 50%;
-    overflow: hidden
 }
 
 
