@@ -16,7 +16,7 @@ body, html{
 /*
  * Home Page Elements
  */
- 
+
 #imageList{
     width: 100%
 }
@@ -28,7 +28,8 @@ body, html{
     margin-left: -41%; 
     z-index: 2000; 
     width: 80%; 
-    height: 50%
+    height: 50%;
+    overflow: hidden
 }
 
 
