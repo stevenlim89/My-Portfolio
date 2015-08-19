@@ -4,15 +4,31 @@ body, html{
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;  
-}
-
-.ui.secondary.pointing.menu{
-
+    overflow-x: hidden;
+    padding-bottom: 1px  
 }
 
 .ui.secondary.pointing.menu .active{
     color: #3399FF !important;
     border-color: #3399FF !important
 }
+
+/*
+ * Home Page Elements
+ */
+ 
+#imageList{
+    width: 100%
+}
+
+#homeIconHeader{
+    position: absolute; 
+    color: white; 
+    padding-top: 80px; 
+    margin-left: -41%; 
+    z-index: 2000; 
+    width: 80%; 
+    height: 50%
+}
+
 

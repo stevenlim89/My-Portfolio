@@ -1,64 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Home Page</title>
-
-    <link rel="stylesheet" type="text/css" href="semantic/out/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
-
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="semantic/out/semantic.min.js"></script>
+    <% include ../partials/header %>
 </head>
 
 <body>
-    <div class="ui secondary pointing menu">
-        <a class="active item">
-            <i class="home icon"></i>Home
-        </a>
+    <% include ../partials/menu %>
 
-        <a class="item">
-            <i class="folder icon"></i>Projects
-        </a>
-        <a class="item">
-            <i class="comments icon"></i>Blog
-        </a>
-    </div>
-
-
-    
     <center>
-        <div style="width: 100%!important">
-            <div class="image" style="position: relative" id="imageList">
-                <div class="ui three column grid">
-                    <div class="row" style="position: absolute; z-index: 1000">
-                        <div class="column"></div>
-                        <div class="column">
-                            <div class="ui icon header" style="color: white">
-                                <i class="computer icon"></i>
-                                <div class="content">
-                                    <h1>Steven's Site</h1>
-                                </div>
-                            </div>        
-                        </div>
-                        <div class="column"></div>
-                    </div>
-                </div>
-                
-                <img src="bali1.JPG" alt="" style="display: block; width: 100%; max-height: 300px;"/>
-                <img src="bali2.JPG" alt="" class="noDisplay" style="display:none; width:100%; max-height: 300px;" />
+        <div class="ui centered grid" id="imageList">
+            <div class="fourteen wide column" style="text-align: center; padding: 0">
+                <h1 class="ui icon header" id="homeIconHeader">
+                    <i class="computer icon"></i>
+                    <div class="content">
+                        <span>Welcome to Steven's Site</span>
+                    </div    
+                </h1>    
             </div>
-        </div>
 
+            <img src="bali1.JPG" alt="" style="display: block; padding: 0; width: 100%; max-height: 300px;" />
+            <img src="bali2.JPG" alt="" class="noDisplay" style="display:none; padding: 0; width:100%; max-height: 300px;"/>
+        </div>    
+                
         <br />
         <br />
 
         <div class="ui container" style="width: 90%">
             <div class="ui items">
                 <div class="item">
-                        <img class="ui bordered image" src="rsz_steven.jpg" style="padding: 10px; border: 1px solid rgba(34,36,38,.15); border-radius: .28571429rem">
+                    <img class="ui bordered image" src="rsz_steven.jpg" style="padding: 10px; border: 1px solid rgba(34,36,38,.15); border-radius: .28571429rem">
                     <div class="middle aligned content">
                         <div style="display:inline-block; float: right">
                             <div class="description">
@@ -141,41 +111,19 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-        //$('#iconHead').transition({
-          //  animation: 'fade left',
-           // duration: 1000,
-           // interval: 200
-        //});
 
         $('.ui.large.circular')
           .popup({
               hoverable: true
-          });
+        });
 
-        // Need to extract to partial
-        var menuItem = $('.ui.secondary.pointing.menu .item');
-
-        handler = {
-            activate: function(){
-                if(!$(this).hasClass('active')){
-                    $(this).addClass('active').closest('.ui.secondary.pointing.menu').find('.item').not($(this)).removeClass('active');
-                }
-            }
-        }
-
-        menuItem.on('click', handler.activate);
-
-        // end of extraction to partial
         var imageList = document.getElementById('imageList');
         var pictures = imageList.getElementsByTagName('img');
-         var next = pictures[0];
-        setInterval(function () { carousel() }, 7000);
+        var next = pictures[0];
+
+        setInterval(function () { carousel() }, 6000);
 
         function carousel() {
-            
-        
-           
-
             for (var i = 0; i < pictures.length; i++) {
                 if (!$(pictures[i]).hasClass("noDisplay")) {
                     
@@ -187,15 +135,13 @@
                     
                     pictures[i].className = 'noDisplay';
                     pictures[i].style.display = 'none';
-                    
+
                     $(next).removeClass('noDisplay');
                     $(next).transition({
                         animation: 'fade',
                         duration: '1s',
-                        hidden: 'hidden'
+                        displayType: 'hidden'
                     });
-                    
-                    
                     break;
                 }
             }

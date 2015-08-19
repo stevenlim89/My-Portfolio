@@ -1,0 +1,24 @@
+<div class="ui secondary pointing menu">
+    <a class="active item" href="/">
+        <i class="home icon"></i>Home
+    </a>
+
+    <a class="item" href="/projects">
+        <i class="rocket icon"></i>Projects
+    </a>
+    <a class="item" href="/blog">
+        <i class="comments icon"></i>Blog
+    </a>
+</div>
+
+<script type="text/javascript">  
+    var menuItem = $('.ui.secondary.pointing.menu .item');
+
+    handler = {
+        activate: function(){
+            $(this).addClass('active').closest('.ui.secondary.pointing.menu').find('.item').not($(this)).removeClass('active');
+        }
+    }
+
+    menuItem.on('click', handler.activate);  
+</script>
