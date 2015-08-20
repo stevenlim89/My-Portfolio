@@ -22,6 +22,10 @@ body, html{
     width: 85% !important
 }
 
+.headerRule{
+    color: #3399FF
+}
+
 /*
  * Home Page Elements
  */
