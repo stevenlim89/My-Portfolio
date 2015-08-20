@@ -7,14 +7,88 @@
 <body>
 	<% include ../partials/menu %>
 
-	<div class="ui container" style="width: 100%; background-color: #3399FF; height: 300px">
+	<div class="ui container bannerContainer">
 		<center>
-			<h1 class="ui icon header" style="color: white">
+			<h1 class="ui icon header notHome">
 				<i class="rocket icon"></i>
 				<span>Projects Page</span>
 			</h1>
 		</center>
 	</div>
+
+	<br>
+	<br>
+
+	<center>
+		<div class="ui card widthRule">
+			<div class="fluid image" id="imageListPro">
+				<img src="bali1.JPG" alt="" style="display: block; padding: 0;  max-height: 200px;" />
+            	<img src="bali2.JPG" alt="" class="noDisplay" style="display:none; visibility: hidden; padding: 0;  max-height: 200px;"/>
+			</div>
+			<div class="content" style="text-align: start">
+				<div class="header">
+					<h2>Carousel</h2>
+				</div>
+				<div class="meta">
+		        	<a>Friends</a>
+		      	</div>
+				<div class="description">
+					<p>
+						This program gets a list of pictures from within your html code and displays them one at a time. 
+						You can choose the interval at which they fade. Uses javascript to manipulate the photos while keeping
+						them in place. Note: opacity of photos was changed through photo editing outside of the site, NOT through css
+						or javascript. 
+					</p>
+				</div>
+			</div>	
+			<div class="extra content">
+				<a href="github.com">
+					<i class="code icon"></i> Get Source Code
+				</a>	
+			</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+	</center>		
 </body>
 
 </html>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		document.getElementById("menu").style.marginBottom = "0px";
+
+		var imageList = document.getElementById('imageListPro');
+        var pictures = imageList.getElementsByTagName('img');
+        var next = pictures[0];
+
+        setInterval(function () { carousel() }, 6000);
+
+        function carousel() {
+            for (var i = 0; i < pictures.length; i++) {
+                if (!$(pictures[i]).hasClass("noDisplay")) {
+                    
+                    if (i == pictures.length - 1) {
+                        next = pictures[0];
+                        next.style.visibility = "hidden";
+                    } else {
+                        next = pictures[i].nextElementSibling;
+                    }
+                    
+                    pictures[i].className = 'noDisplay';
+                    pictures[i].style.display = 'none';
+
+                    $(next).removeClass('noDisplay');
+                    $(next).transition({
+                        animation: 'fade',
+                        duration: '1s',
+                        displayType: 'hidden'
+                    });
+                    break;
+                }
+            }
+        }
+	});
+</script>

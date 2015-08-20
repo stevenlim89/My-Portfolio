@@ -1,3 +1,7 @@
+/*
+ * Global page elements and rules
+ */
+
 body, html{
     font-family: Helvetica, Verdana;
     width: 100%;
@@ -5,12 +9,17 @@ body, html{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    padding-bottom: 1px  
+    padding-bottom: 1px;
+    background-color: #F5F5F5  
 }
 
 .ui.secondary.pointing.menu .active{
     color: #3399FF !important;
     border-color: #3399FF !important
+}
+
+.widthRule{
+    width: 85% !important
 }
 
 /*
@@ -24,11 +33,36 @@ body, html{
 #homeIconHeader{
     position: absolute; 
     color: white; 
-    padding-top: 80px; 
     margin-left: -41%;
-    z-index: 2000; 
+    z-index: 2000;
+    font-size: 300% !important;
+    padding-top: 50px; 
     width: 80%; 
     height: 50%;
 }
+
+/*
+ * Project page elements
+ */
+
+.bannerContainer{
+    width: 100% !important; 
+    background-color: #404040 !important; 
+    height: 300px !important;
+    margin: 0!important
+}
+
+.icon.header.notHome{
+    color: white; 
+    padding-top: 50px; 
+    font-size: 300%
+}
+
+/*
+ * Blog page elements
+ */
+
+
+
 
 
