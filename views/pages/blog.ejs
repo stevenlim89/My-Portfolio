@@ -23,17 +23,19 @@
 		<div class="ui card widthRule">
 	  		<div class="content" style="text-align: start">
 	    		<div class="header headerRule">
-	    			<h2>Hello, first post</h2>
+	    			<h2>Hello World, first post</h2>
 	    		</div>
 				<div class="meta">
 					August 19th, 2015
 				</div>
 	    		<div class="description">
-	    			<p>Welcome to my site! I will be posting more content shortly. Keep checking for updates.</p>
+	    			<p>Welcome to my site! I will be posting more content shortly. I am still building the site so I have
+	    				not been able to focus my energies on other projects. Once this site is done, I will probably
+	    				start posting projects and tutorials. Keep checking for updates.</p>
 	    		</div>
 	    	</div>
 	    	<div class="extra content">
-	    		Steven
+	    		<i class="user icon"></i>Steven
 	    	</div>	
 	    </div>
     </center>			
@@ -47,5 +49,10 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		document.getElementById("menu").style.marginBottom = "0px";
+
+		$('.ui.icon.header').transition({
+			animation: 'slide left',
+			duration: '2s'
+		});
 	});	
 </script>			

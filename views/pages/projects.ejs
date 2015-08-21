@@ -18,6 +18,7 @@
 
 	<br>
 	<br>
+	<br>
 
 	<center>
 		<div class="ui card widthRule">
@@ -34,9 +35,12 @@
 		      	</div>
 				<div class="description">
 					<p>
-						This program gets a list of pictures from within your html code and displays them one at a time. 
+						This program gets a list of pictures from within your html code and displays them one at a time.
 						You can choose the interval at which they fade. Uses javascript to manipulate the photos while keeping
-						them in place. Note: opacity of photos was changed through photo editing outside of the site, NOT through css
+						them in place. Unlike other carousels (such as bootstrap), this is timed and there are no arrows that you have to press.
+						Great for banners and headers, especially if you put text over the pictures. Make sure the pictures have some opacity or good
+						contrast before putting text over it, however. 
+						<strong style="color: #3399FF">Note:</strong> opacity of photos was changed through photo editing outside of the site, NOT through css
 						or javascript. 
 					</p>
 				</div>
@@ -59,6 +63,11 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		document.getElementById("menu").style.marginBottom = "0px";
+
+		$('.ui.icon.header').transition({
+			animation: 'slide left',
+			duration: '2s'
+		});
 
 		var imageList = document.getElementById('imageListPro');
         var pictures = imageList.getElementsByTagName('img');
