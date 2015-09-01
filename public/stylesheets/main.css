@@ -89,7 +89,23 @@ body, html{
  * Blog page elements
  */
 
+.ui.horizontal.fluid.tabular.menu{
+    background-color: #F5F5F5;
+    text-align: left
+}
 
+.ui.horizontal.fluid.tabular.menu .active.item{
+    color: #3399FF;
+    border-color: #3399FF; 
+    background-color: #F5F5F5
+}
+
+@media only screen and (max-device-width: 480px) {
+    .ui.horizontal.fluid.tabular.menu{
+        font-size: .75rem
+    }
+
+}
 
 
 
