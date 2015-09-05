@@ -94,10 +94,8 @@ body, html{
     text-align: left
 }
 
-.ui.horizontal.fluid.tabular.menu .active.item{
+.ui.fluid.selection.dropdown .selected.item, .text{
     color: #3399FF;
-    border-color: #3399FF; 
-    background-color: #F5F5F5
 }
 
 @media only screen and (max-device-width: 480px) {

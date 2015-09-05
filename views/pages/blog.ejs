@@ -20,22 +20,27 @@
 	<br>
 
 	<center>
-	    <div class="ui horizontal fluid tabular menu" style="width: 85% !important">
-	        <a class="active item">
-	           All
-	        </a>
-	        <a class="item mcTab">
-	            Common Misconception
-	        </a>
-	        <a class="item tutorialTab">
-	            Tutorials
-	        </a>
-	        <a class="item helloTab">
-	            Hello World
-	        </a>
-	    </div>
+	    <div class="ui fluid selection dropdown" style="width: 85% !important">
+			<i class="dropdown icon"></i>
+			<div class="default text">Sort by Topic</div>
+			<div class="menu">
+	        	<div class="item" data-value="0">
+		           All
+		        </div>
+		        <div class="item mcTab" data-value="1">
+		            Common Misconception
+		        </div>
+		        <div class="item tutorialTab" data-value="2">
+		            Tutorials
+		        </div>
+		        <div class="item helloTab" data-value="3">
+		            Hello World
+		        </div>
+		    </div>    
+		</div>	
+		<br>
 	    <br>
-        <div class="streched column" style="width: 70%">
+        <div class="streched column" style="width: 85%">
         	<div class="ui card tutorial" style="width: 100%">
 				<div class="image" id="imageListPro">
 					<img src="parse.jpg" style="height: 300px;"/>
@@ -205,16 +210,18 @@
 		var misconceptions = document.getElementsByClassName('mc');
 		var first = document.getElementsByClassName('hello');
 
+		$('.ui.fluid.selection.dropdown').dropdown();
+
 		$('.ui.icon.header').transition({
 			animation: 'slide left',
 			duration: '2s'
 		});
 
-		var menu = $('.ui.horizontal.fluid.tabular.menu .item');
+		var menu = $('.ui.fluid.selection.dropdown .item');
         handler = {
             activate: function () {
                 if (!$(this).hasClass('active')) {
-                    $(this).addClass('active').closest('.ui.horizontal.fluid.tabular.menu').find('.item').not($(this)).removeClass('active');
+                    $(this).addClass('active').closest('.ui.fluid.selection.dropdown').find('.item').not($(this)).removeClass('active');
                     sortCards($(this));
                 }
             }
