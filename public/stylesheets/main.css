@@ -10,12 +10,21 @@ body, html{
     padding: 0;
     overflow-x: hidden;
     padding-bottom: 1px;
-    background-color: #F0EAE6;    
+    background-color: #00BEBE;    
+}
+@font-face { 
+    font-family: Manifesto; 
+    src: url('MANIFESTO.ttf'); 
+}
+
+#menu, #menu .item{
+    color: white;
+    border-bottom-color: #00BEBE
 }
 
 .ui.secondary.pointing.menu .active{
-    color: #3399FF !important;
-    border-color: #3399FF !important
+    color: white !important;
+    border-color: white !important
 }
 
 .widthRule{
@@ -26,47 +35,40 @@ body, html{
     color: #3399FF !important
 }
 
+.name{
+    background-color: #00BEBE !important;
+    color: white;
+    border: none !important;
+    box-shadow: none !important;
+    height: 16% !important; 
+}
+
 /*
  * Home Page Elements
  */
 
-#imageList{
-    width: 100%
+#nameBlock{
+    font-family: Manifesto;
+    width: 30%; 
+    text-align: start; 
+    height: 100%;
+    margin-left: 15%;
+    margin-right: 0% !important;
 }
 
-#homeIconHeader{
-    visibility: hidden;
-    position: absolute; 
-    color: white; 
-    margin-left: -41%;
-    z-index: 2000;
-    font-size: 300% !important;
-    padding-top: 5%; 
-    width: 80%; 
-    height: 40%;
+.homeButtons{
+    font-size: 5rem !important;
+    background-color: #00BEBE !important;
+    border-width: 10px !important;
+    border-color: white !important;
+    box-shadow: 0 0 0 7px #f9fafb inset !important;
+    margin-top: 15% !important;
+    color: white !important;
 }
 
-@media only screen and (max-device-width: 480px) {
-    #homeIconHeader{
-        visibility: hidden;
-        position: absolute; 
-        color: white; 
-        margin-left: -41%;
-        z-index: 2000;
-        font-size: 260% !important;
-        padding-top: 15%; 
-        width: 80%; 
-        height: 40%;
-    }
+.homeButtons > .icon{
+    opacity: 1 !important;
 }
-
-#profilePic{
-    padding: 10px; 
-    border: 1px solid rgba(34,36,38,.15); 
-    border-radius: .28571429rem;
-    background-color: white;
-}
-
 /*
  * Project page elements
  */

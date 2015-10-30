@@ -6,183 +6,86 @@
 
 <body>
     <% include ../partials/menu %>
-    
-    <center>
-        <div class="ui centered grid" id="imageList">
-            <div class="fourteen wide column" style="text-align: center; padding: 0">
-                <h1 class="ui icon header" id="homeIconHeader">
-                    <i class="computer icon"></i>
-                    <div class="content">
-                        <span>Welcome to Steven's Site</span>
-                    </div    
-                </h1>    
-            </div>
-
-            <img src="bali1.JPG" alt="" style="display: block; padding: 0; width: 100%; height: 300px;" />
-            <img src="thai2.jpg" alt="" class="noDisplay" style="display:none; visibility: hidden; padding: 0; width:100%; height: 300px;"/>
-            <img src="bali2.JPG" alt="" class="noDisplay" style="display:none; visibility: hidden; padding: 0; width:100%; height: 300px;"/>
-            <img src="thai1.jpg" alt="" class="noDisplay" style="display:none; visibility: hidden; padding: 0; width:100%; height: 300px;"/>
-        </div>    
-                
-        <br />
-        <br />
-        <br>
-
-        <div class="ui container widthRule">
-            <div class="ui items" style="width: 90%">
-                <div class="item">
-                    <img class="ui bordered image" src="rsz_steven.jpg" id="profilePic">
-                    <div class="middle aligned content">
-                        <div style="display:inline-block; float: right">
-                            <div class="description">
-                                <div class="ui raised segment">
-                                    <div class="header">
-                                        <h1><center>Steven Lim</center></h1>
-                                    </div>
-                                    <div style="text-align: start">
-                                        <strong>School:</strong> University of California San Diego<br />
-                                        <strong>Major:</strong> Computer Engineering<br />
-                                        <strong>Graduation Date(Expected):</strong> June 2016<br />
-                                        <strong>Current Job:</strong> Test, Development, and Integration Intern at Alcatel OneTouch
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <div class="ui grid" style="width: 100%; height: 90%">
+        <div class="row" style="height: 100%">
+            <div id="nameBlock" class="column">
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="S" onmouseover="hover(this)" onmouseout="hoverOut(this)">S</p>
+                </div> 
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="T" onmouseover="hover(this)" onmouseout="hoverOut(this)">T</p>
+                </div> 
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="E" onmouseover="hover(this)" onmouseout="hoverOut(this)">E</p>
+                </div> 
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="V" onmouseover="hover(this)" onmouseout="hoverOut(this)">V</p>
+                </div> 
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="E2" onmouseover="hover(this)" onmouseout="hoverOut(this)">E</p>
                 </div>
+                <div class="ui segment name" style="height: 16%">
+                    <p style="font-size: 300%" id="N" onmouseover="hover(this)" onmouseout="hoverOut(this)">N</p>
+                </div>  
             </div>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="widthRule">
-            <div class="ui horizontal divider " style="color: #3399FF">
-                
-                <h1><i class="edit icon"></i>About Me</h1>
-            </div>
-
-            <br>
-
-            <div class="ui raised segment" style="width: 90%; text-align: start">
-                <p>
-                    My name is Steven and I am currently in my fourth year at the University of California San Diego. I am
-                    studying Computer Engineering which is a culmination of computer hardware and software, but recently, my focus
-                    is more on the software side. My favorite languages to program in are Java and the C's(C, C#, C++), but have
-                    also dabbled in Python. Lately, I have been doing a lot of web development (it is what my internship this summer was primarily
-                    about) and making my own Android applications. I mostly did frontend work for my internship and I loved doing it. In terms of backend, I have worked with MongoDB. I am still pretty new with it, but I am
-                    getting better at Mongo as the days go by. When people ask me if I am more into backend or frontend, it is hard to give an answer. I really enjoy both. I guess I like seeing how the whole system works. However, if I had to choose, I would say that I am more interested in the backend since that is where most of the problem solving is at. I love problem solving.
-                    <br>
-                    <br>
-                    Developing software to solve solutions is more than a hobby, its a passion. If you are interested in contacting me, please feel free to use one of the links below or through email. 
-                </p>
-                <p>
-                    Fun Stuff: In my spare time, I like to go hiking, play basketball, or pretty much do anything outdoors. I spend a lot
-                    of time looking at computer screens all day so it is nice to get out once in a while. I also like watching a lot of 
-                    movies (Forrest Gump all-time favorite) and sports. I love basketball (Lakers, yea I know they suck now) and hockey (Ducks). Oh I also love
-                    sleeping, but I mean, who doesn't?
-                </p>
-                <p>
-                    I made this site in order to post my projects outside of the classroom for others to see and to share my thoughts on what is going on in
-                    the tech world. I am also going to be putting up tutorials for things that I had trouble with and hope that it 
-                    may help other people who may have had the same problems. I hope to update this site with new content as often as I can,
-                    but that may not be the case once midterms/finals come around.
-                </p>
-                <p>
-                    Stay classy San Diego,
-                    <br>
-                    Steven
-                </p> 
-            </div>
-        </div>    
-
-        <br>
-        <br>
-
-        <div class="widthRule">
-            <div class="ui horizontal divider">
-                <div class="content" style="color: #3399FF">
-                    <h1><i class="phone icon"></i>Contact Info</h1>
-                </div>
-            </div>
-            <br />
-            <br />
-            <div class="ui four column grid container" style="width: 90%">
+            <div class="column" style="width: 25%; margin-top: 5%; margin-left: 3%">
                 <div class="row">
                     <div class="column">
-                        <a class="ui large circular facebook icon button" data-content="Facebook" href="https://www.facebook.com/stevenlim89">
+                        <a class="ui circular facebook icon button homeButtons" data-content="Facebook" href="https://www.facebook.com/stevenlim89">
                             <i class="facebook icon"></i>
                         </a>
                     </div>
                     <div class="column">
-                        <a class="ui large circular linkedin icon button" href="https://www.linkedin.com/pub/steven-lim/89/452/890" data-content="LinkedIn">
-                            <i class="linkedin link icon"></i>
+                        <a class="ui circular github icon button homeButtons" href="https://github.com/stevenlim89" data-content="Github">
+                            <i class="github icon"></i>
                         </a>
-                    </div>
-                    <div class="column">
-                        <a class="ui large circular icon button" style="background-color: black" href="https://github.com/stevenlim89" data-content="Github">
-                            <i class="github alternate icon" style="color: white"></i>
-                        </a>
-                    </div>
-                    <div class="column">
-                        <button class="ui large circular google icon button" style="background-color: #F90101" data-content="stevenlim890@gmail.com">
-                            <i class="google icon" style="color: white"></i>
-                        </button>
-                    </div>
-                </div>
+                    </div>       
+                </div>    
             </div>
-
-            <br />
-            <br />
-
-            <p><small><i class="copyright icon"></i>2015 I do not even know what I am copyrighting - Built with Semantic UI</small></p>
-        </div>
-    </center>
+            <div class="column" style="width: 25%; margin-top: 5%">
+                <div class="row">
+                    <div class="column">
+                        <a class="ui circular linkedin icon button homeButtons" href="https://www.linkedin.com/pub/steven-lim/89/452/890" data-content="LinkedIn">
+                            <i class="linkedin icon"></i>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <button class="ui circular google icon button homeButtons" data-content="stevenlim890@gmail.com">
+                            <i class="google icon"></i>
+                        </button>
+                    </div>       
+                </div>    
+            </div>
+        </div>            
+    </div>           
 </body>
 </html>
 
 <script type="text/javascript">
-    $(document).ready(function(){
-
-        $('.ui.icon.header').transition({
-            animation: 'slide left',
-            duration: '2s'
-        });
-
-        $('.ui.large.circular')
+    $('.homeButtons')
           .popup({
               hoverable: true
-        });
-
-        var imageList = document.getElementById('imageList');
-        var pictures = imageList.getElementsByTagName('img');
-        var next = pictures[0];
-
-        setInterval(function () { carousel() }, 6000);
-
-        function carousel() {
-            for (var i = 0; i < pictures.length; i++) {
-                if (!$(pictures[i]).hasClass("noDisplay")) {
-                    
-                    if (i == pictures.length - 1) {
-                        next = pictures[0];
-                        next.style.visibility = "hidden";
-                    } else {
-                        next = pictures[i].nextElementSibling;
-                    }
-                    
-                    pictures[i].className = 'noDisplay';
-                    pictures[i].style.display = 'none';
-
-                    $(next).removeClass('noDisplay');
-                    $(next).transition({
-                        animation: 'fade',
-                        duration: '1s',
-                        displayType: 'hidden'
-                    });
-                    break;
-                }
-            }
-        }
     });
+
+    function hover(letter){
+        switch(letter.id){
+            case "S": letter.innerHTML = "Student"; break;
+            case "T": letter.innerHTML = "Techy"; break;
+            case "E": letter.innerHTML = "Engineer"; break;
+            case "V": letter.innerHTML = "Venturer"; break;
+            case "E2": letter.innerHTML = "Entrepeneur"; break;
+            case "N": letter.innerHTML = "Nerd"; break;
+        }
+    }
+
+    function hoverOut(letter){
+        switch(letter.id){
+            case "S": letter.innerHTML = "S"; break;
+            case "T": letter.innerHTML = "T"; break;
+            case "E": letter.innerHTML = "E"; break;
+            case "V": letter.innerHTML = "V"; break;
+            case "E2": letter.innerHTML = "E"; break;
+            case "N": letter.innerHTML = "N"; break;
+        }
+    }
 </script>
