@@ -10,21 +10,22 @@ body, html{
     padding: 0;
     overflow-x: hidden;
     padding-bottom: 1px;
-    background-color: #00BEBE;    
+    background-color: #ECECEC;    
 }
+
 @font-face { 
     font-family: Manifesto; 
     src: url('MANIFESTO.ttf'); 
 }
 
 #menu, #menu .item{
-    color: white;
-    border-bottom-color: #00BEBE
+    color: black;
+    border-bottom-color: #ECECEC
 }
 
 .ui.secondary.pointing.menu .active{
-    color: white !important;
-    border-color: white !important
+    color: #00BEBE !important;
+    border-color: #00BEBE !important;
 }
 
 .widthRule{
@@ -46,7 +47,9 @@ body, html{
 /*
  * Home Page Elements
  */
-
+#homeBody{
+    background-color: #00BEBE; 
+}
 #nameBlock{
     font-family: Manifesto;
     width: 30%; 

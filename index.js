@@ -17,6 +17,7 @@ app.get('/', function(request, response) {
 
 app.get('/projects', routes.projects);
 app.get('/blog', routes.blog);
+app.get('/aboutme', routes.about);
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));

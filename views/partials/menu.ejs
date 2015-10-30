@@ -3,6 +3,10 @@
         <i class="home icon"></i>Home
     </a>
 
+    <a class="item about" href="/aboutme">
+        <i class="male icon"></i>About Me
+    </a>
+
     <a class="item projects" href="/projects">
         <i class="rocket icon"></i>Projects
     </a>
@@ -21,6 +25,7 @@
     switch(pageLoaded){
         case "blog": activePage = $('.ui.secondary.pointing.menu .item.blog'); break;
         case "projects": activePage = $('.ui.secondary.pointing.menu .item.projects'); break;
+        case "aboutme": activePage = $('.ui.secondary.pointing.menu .item.about'); break;
         default: activePage = $('.ui.secondary.pointing.menu .item.home'); break;
     }
 
