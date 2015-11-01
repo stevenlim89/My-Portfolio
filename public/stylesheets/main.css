@@ -36,14 +36,6 @@ body, html{
     color: #3399FF !important
 }
 
-.name{
-    background-color: #00BEBE !important;
-    color: white;
-    border: none !important;
-    box-shadow: none !important;
-    height: 16% !important; 
-}
-
 /*
  * Home Page Elements
  */
@@ -51,28 +43,48 @@ body, html{
     background-color: #00BEBE; 
 }
 
-#nameBlock{
-    font-family: Manifesto;
-    width: 30%; 
-    text-align: start; 
-    height: 100%;
-    margin-left: 15%;
-    margin-right: 0% !important;
+#nameSegment{
+    width: 80%; 
+    background-color: #00BEBE;
+    color: white;
+    box-shadow: none;
+    border: none
+}
+
+#nametag{
+    font-family: Manifesto; 
+    font-size: 100px; 
+    margin-top: 10%;
+    margin-bottom: 0;
+    letter-spacing: 10px;
 }
 
 .homeButtons{
-    font-size: 5rem !important;
+    font-size: 2rem !important;
     background-color: #00BEBE !important;
     border-width: 10px !important;
     border-color: white !important;
     box-shadow: 0 0 0 7px #f9fafb inset !important;
-    margin-top: 15% !important;
     color: white !important;
 }
 
 .homeButtons > .icon{
     opacity: 1 !important;
 }
+/*
+ * About Me
+ */
+
+#aboutMeId{
+    width: 50%; 
+    box-shadow: none; 
+    border: none; 
+    background-color: #ECECEC; 
+    text-align: start; 
+    font-size: 20px;
+    padding-left: 10%;
+}
+
 /*
  * Project page elements
  */

@@ -6,90 +6,70 @@
 
 <body id="homeBody">
     <% include ../partials/menu %>
-    <div class="ui grid" style="width: 100%; height: 90%">
-        <div class="row" style="height: 100%">
-            <div id="nameBlock" class="column">
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="S" onmouseover="hover(this)" onmouseout="hoverOut(this)">S</p>
-                </div> 
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="T" onmouseover="hover(this)" onmouseout="hoverOut(this)">T</p>
-                </div> 
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="E" onmouseover="hover(this)" onmouseout="hoverOut(this)">E</p>
-                </div> 
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="V" onmouseover="hover(this)" onmouseout="hoverOut(this)">V</p>
-                </div> 
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="E2" onmouseover="hover(this)" onmouseout="hoverOut(this)">E</p>
+    <center>
+        <div class = "ui compact segment" id="nameSegment">
+            <p id="nametag">Steven Lim</p>
+            <p style="font-size: 20px; letter-spacing: 10px; text-align: center; display: inline-block">I am a </p>
+            <p id="wordFlip" style="font-size: 40px; letter-spacing: 10px; text-align: center"> Student</p>
+        </div>
+        <br>
+        <div class="ui grid" style="width: 50%">
+            <div class="row">
+                <div class="column" style="width: 25%">
+                    <a class="ui circular facebook icon button homeButtons" data-content="Facebook" href="https://www.facebook.com/stevenlim89">
+                        <i class="facebook icon"></i>
+                    </a>
                 </div>
-                <div class="ui segment name" style="height: 16%">
-                    <p style="font-size: 300%" id="N" onmouseover="hover(this)" onmouseout="hoverOut(this)">N</p>
-                </div>  
-            </div>
-            <div class="column" style="width: 25%; margin-top: 6%; margin-left: 3%">
-                <div class="row">
-                    <div class="column">
-                        <a class="ui circular facebook icon button homeButtons" data-content="Facebook" href="https://www.facebook.com/stevenlim89">
-                            <i class="facebook icon"></i>
-                        </a>
-                    </div>
-                    <div class="column">
-                        <a class="ui circular github icon button homeButtons" href="https://github.com/stevenlim89" data-content="Github">
-                            <i class="github icon"></i>
-                        </a>
-                    </div>       
-                </div>    
-            </div>
-            <div class="column" style="width: 25%; margin-top: 6%">
-                <div class="row">
-                    <div class="column">
-                        <a class="ui circular linkedin icon button homeButtons" href="https://www.linkedin.com/pub/steven-lim/89/452/890" data-content="LinkedIn">
-                            <i class="linkedin icon"></i>
-                        </a>
-                    </div>
-                    <div class="column">
-                        <button class="ui circular google icon button homeButtons" data-content="stevenlim890@gmail.com">
-                            <i class="google icon"></i>
-                        </button>
-                    </div>       
-                </div>    
-            </div>
-        </div>            
-    </div>           
+                <div class="column" style="width: 25%">
+                    <a class="ui circular github icon button homeButtons" href="https://github.com/stevenlim89" data-content="Github">
+                        <i class="github icon"></i>
+                    </a>
+                </div>         
+                <div class="column" style="width: 25%">
+                    <a class="ui circular linkedin icon button homeButtons" href="https://www.linkedin.com/pub/steven-lim/89/452/890" data-content="LinkedIn">
+                        <i class="linkedin icon"></i>
+                    </a>
+                </div>
+                <div class="column" style="width: 25%">
+                    <button class="ui circular google icon button homeButtons" data-content="stevenlim890@gmail.com">
+                        <i class="google icon"></i>
+                    </button>
+                </div>          
+            </div>    
+        </div>
+    </center>              
 </body>
 </html>
 
 <script type="text/javascript">
+    $('#menu, #menu .item').css("color", "white");
+    $('#menu, #menu .item').css("border-bottom-color", "#00BEBE");
+    $('.ui.secondary.pointing.menu .active').attr("style", "border-color: white !important; color: white !important");
+
     $('.homeButtons')
           .popup({
               hoverable: true
     });
 
-    $('#menu, #menu .item').css("color", "white");
-    $('#menu, #menu .item').css("border-bottom-color", "#00BEBE");
-    $('.ui.secondary.pointing.menu .active').attr("style", "border-color: white !important; color: white !important");
+    var flip = document.getElementById('wordFlip');
+    var counter = 0;
+    var textArray = ["Developer", "Techy", "Entrepeneur", "Nerd", "Problem Solver", "Student"];
 
-    function hover(letter){
-        switch(letter.id){
-            case "S": letter.innerHTML = "Student"; break;
-            case "T": letter.innerHTML = "Techy"; break;
-            case "E": letter.innerHTML = "Engineer"; break;
-            case "V": letter.innerHTML = "Venturer"; break;
-            case "E2": letter.innerHTML = "Entrepeneur"; break;
-            case "N": letter.innerHTML = "Nerd"; break;
+    setInterval(function () { changeWord() }, 3000);
+
+    function changeWord(){
+        $('#wordFlip').transition({
+            animation: 'fade in',
+            duration: '2s',
+        });
+
+        flip.innerHTML = textArray[counter];
+        counter++;
+        
+        if(counter > textArray.length - 1){
+            counter = 0;
         }
     }
 
-    function hoverOut(letter){
-        switch(letter.id){
-            case "S": letter.innerHTML = "S"; break;
-            case "T": letter.innerHTML = "T"; break;
-            case "E": letter.innerHTML = "E"; break;
-            case "V": letter.innerHTML = "V"; break;
-            case "E2": letter.innerHTML = "E"; break;
-            case "N": letter.innerHTML = "N"; break;
-        }
-    }
+    
 </script>
