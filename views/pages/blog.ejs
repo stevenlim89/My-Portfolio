@@ -7,193 +7,204 @@
 <body>
 	<% include ../partials/menu %>
 
-	<div class="ui container bannerContainer" style="margin: 0 !important">
-		<center>
-			<h1 class="ui icon header notHome">
-				<i class="comments icon"></i>
-				<span>Blog Page</span>
-			</h1>
-		</center>
-	</div>
-
-	<br>
-	<br>
-
 	<center>
-	    <div class="ui fluid selection dropdown" style="width: 85% !important">
-			<i class="dropdown icon"></i>
-			<div class="default text">Sort by Topic</div>
-			<div class="menu">
-	        	<div class="item" data-value="0">
-		           All
-		        </div>
-		        <div class="item mcTab" data-value="1">
-		            Common Misconception
-		        </div>
-		        <div class="item tutorialTab" data-value="2">
-		            Tutorials
-		        </div>
-		        <div class="item helloTab" data-value="3">
-		            Hello World
-		        </div>
-		    </div>    
-		</div>	
 		<br>
-	    <br>
-        <div class="streched column" style="width: 85%">
-        	<div class="ui card tutorial" style="width: 100%">
-				<div class="image" id="imageListPro">
-					<img src="parse.jpg" style="height: 300px;"/>
+		<h1 style="font-family: Manifesto; font-size: 80px; letter-spacing: 10px">
+			Let's Discuss
+		</h1>
+		<p style="width: 50%; text-align: start">Here I will discuss certain topics and provide tutorials for things that I had trouble with. Hopefully you will find the blog posts enlightening and the tutorials helpful!</p>
+		<br>
+		<br>
+		<div class="ui grid" style="width: 80%">
+			<div class="row">
+				<div class="column">
+					<div class="ui fluid selection dropdown widthRule">
+						<i class="dropdown icon"></i>
+						<div class="default text">Sort by Topic</div>
+						<div class="menu">
+				        	<div class="item" data-value="0">
+					           All
+					        </div>
+					        <div class="item mcTab" data-value="1">
+					            Common Misconception
+					        </div>
+					        <div class="item tutorialTab" data-value="2">
+					            Tutorials
+					        </div>
+					        <div class="item helloTab" data-value="3">
+					            Hello World
+					        </div>
+			    		</div>
+		    		</div> 
+		    		<br>
+		    		<br>  
 				</div>
-		  		<div class="content" style="text-align: start">
-		    		<div class="header headerRule">
-		    			<h2>Tutorial: Intro to Parse</h2>
-		    		</div>
-					<div class="meta">
-						August 28th, 2015
-					</div>
-		    		<div class="description">
-		    			<p style="word-wrap: break-word">
-		    				Parse is a great backend tool for your application. It enables you to focus more on your project rather than on things like servers, writing your own queries, and many other tedious things. However, it can be a bit confusing on how to get it connected (the tutorial on the Parse website does not really do a good job). I will explain how to get your application connected.
-		    				
-		    				<br>
-		    				<br>
-
-		    				<strong style="color: #3399FF">Note: </strong>This tutorial is going to be for <u>Android</u> applications and assumes that you have created a project already. <br>
-
-		    				<br>
-
-		    				<u>Steps</u><br>
-		    				1. Go to: https://parse.com/apps/quickstart#parse_data/mobile/android/native/existing<br>
-		    				2. Download the Parse SDK from that site.<br>
-		    				3. Unzip it and get two files: Parse-10.jar and the Parse-10.properties files. That is all you need.<br>
-		    				4. Copy them and paste it into your project's app/libs folder.<br>
-		    				5. Go to your build.gradle file (the one that is part of your app module, <strong style="color: #3399FF">NOT</strong> the Project build.gradle file). Paste the following code over the default dependency that was created with your application. You should only have one dependencies section in this file.
-		    				<div class="ui segment" style="border-color: #3399FF">
-		    					dependencies {<br>
-								    compile 'com.parse.bolts:bolts-android:1.+'<br>
-								    compile fileTree(dir: 'libs', include: 'Parse-*.jar')<br>
-								}
+			</div>
+			<div class="row">
+				<div class="column">
+		        	<div class="ui card tutorial widthRule" style="width: 100%">
+						<div class="image" id="imageListPro">
+							<img src="parse.jpg" style="height: 300px;"/>
+						</div>
+				  		<div class="content" style="text-align: start">
+				    		<div class="header headerRule">
+				    			<h2>Tutorial: Intro to Parse</h2>
+				    		</div>
+							<div class="meta">
+								August 28th, 2015
 							</div>
-							6. Go to your AndroidManifest.xml file and paste the use-permissions right after the opening "manifest" tag as shown in the link above.<br>
-							7. Check the application tag and make sure that there is an android:name="com..." field. If there is not, insert it or else you will get lots of errors and it will take forever to debug (Happened to me). Some IDE's do this automatically, some do not, so make sure it is there. <br>
-							8. Make an application class such as this one and insert the Parse initialization method: 
-							<div class="ui segment" style="border-color: #3399FF">
-		    					import android.app.Application;<br>
-								import com.parse.Parse;<br><br>
+				    		<div class="description">
+				    			<p style="word-wrap: break-word">
+				    				Parse is a great backend tool for your application. It enables you to focus more on your project rather than on things like servers, writing your own queries, and many other tedious things. However, it can be a bit confusing on how to get it connected (the tutorial on the Parse website does not really do a good job). I will explain how to get your application connected.
+				    				
+				    				<br>
+				    				<br>
 
-								/**<br>
-								 * Created by Steve on 8/26/15.<br>
-								 */<br>
-								public class YourApplication extends Application{<br>
-								    public void onCreate(){<br>
-								        super.onCreate();<br><br>
+				    				<strong style="color: #00BEBE">Note: </strong>This tutorial is going to be for <u>Android</u> applications and assumes that you have created a project already. <br>
 
-								        Parse.initialize(this, "your application ID",<br>
-								                "your client ID");<br>
+				    				<br>
 
-								    }<br>
-								}<br>
+				    				<u>Steps</u><br>
+				    				1. Go to: https://parse.com/apps/quickstart#parse_data/mobile/android/native/existing<br>
+				    				2. Download the Parse SDK from that site.<br>
+				    				3. Unzip it and get two files: Parse-10.jar and the Parse-10.properties files. That is all you need.<br>
+				    				4. Copy them and paste it into your project's app/libs folder.<br>
+				    				5. Go to your build.gradle file (the one that is part of your app module, <strong style="color: #00BEBE">NOT</strong> the Project build.gradle file). Paste the following code over the default dependency that was created with your application. You should only have one dependencies section in this file.
+				    				<div class="ui segment" style="border-color: #00BEBE">
+				    					dependencies {<br>
+										    compile 'com.parse.bolts:bolts-android:1.+'<br>
+										    compile fileTree(dir: 'libs', include: 'Parse-*.jar')<br>
+										}
+									</div>
+									6. Go to your AndroidManifest.xml file and paste the use-permissions right after the opening "manifest" tag as shown in the link above.<br>
+									7. Check the application tag and make sure that there is an android:name="com..." field. If there is not, insert it or else you will get lots of errors and it will take forever to debug (Happened to me). Some IDE's do this automatically, some do not, so make sure it is there. <br>
+									8. Make an application class such as this one and insert the Parse initialization method: 
+									<div class="ui segment" style="border-color: #00BEBE">
+				    					import android.app.Application;<br>
+										import com.parse.Parse;<br><br>
+
+										/**<br>
+										 * Created by Steve on 8/26/15.<br>
+										 */<br>
+										public class YourApplication extends Application{<br>
+										    public void onCreate(){<br>
+										        super.onCreate();<br><br>
+
+										        Parse.initialize(this, "your application ID",<br>
+										                "your client ID");<br>
+
+										    }<br>
+										}<br>
+									</div>
+									9. Once you have this, make sure you compile and run your code to make sure it works <br>
+									10. Then insert this piece of code right after the Parse.intialize method or in one of your activity page's onCreate methods (do not to forget to include import.parse.Parse or import.parse.ParseObject at the top of the page) : <br>
+									<div class="ui segment" style="border-color: #00BEBE">
+				    					ParseObject testObject = new ParseObject("TestObject");<br>
+										testObject.put("foo", "bar");<br>
+										testObject.saveInBackground();<br>
+									</div>
+									11. Run the code<br>
+									12. Go back to the link from the first step and hit the test button to ensure that something sent to Parse.<br>
+									13. That's it! Your application should be connected to Parse now. Happy Coding.
+				    			</p>
+				    		</div>
+				    	</div>
+				    	<div class="extra content">
+				    		<i class="user icon"></i>Steven
+				    	</div>	
+				    </div>
+				</div>	
+			</div>
+			<div class="row">
+				<div class="column">
+					<div class="ui card mc widthRule">
+				  		<div class="content" style="text-align: start">
+				    		<div class="header headerRule">
+				    			<h2>Common Misconception #1</h2>
+				    		</div>
+							<div class="meta">
+								August 26rd, 2015
 							</div>
-							9. Once you have this, make sure you compile and run your code to make sure it works <br>
-							10. Then insert this piece of code right after the Parse.intialize method or in one of your activity page's onCreate methods (do not to forget to include import.parse.Parse or import.parse.ParseObject at the top of the page) : <br>
-							<div class="ui segment" style="border-color: #3399FF">
-		    					ParseObject testObject = new ParseObject("TestObject");<br>
-								testObject.put("foo", "bar");<br>
-								testObject.saveInBackground();<br>
+				    		<div class="description">
+				    			<p>
+				    				One of the most common misconceptions that people get confused about my major is the difference between Computer Science (CS) and Computer Engineering (CE).<br> 
+				    				Here is how a typical conversation goes:<br>
+
+				    				<br>
+
+				    				<i>Person: What is your major?<br>
+					    				Me: Computer Engineering<br>
+					    				Person: Oh so you are a Computer Science major?<br>
+					    				Me: No I am a Computer Engineering major<br>
+					    				Person: Thats the same thing right?<br>
+					    				Me: No its not. Computer Engineering involves hardware and software, while Computer Science is just software<br>
+					    				Person: Oh I see
+
+					    				(End of conversation)<br>
+				    				<br>
+
+				    				(See same person again and somehow the conversation steers towards majors)<br>
+				    				Person: How is Computer Science?<br>
+				    				Me: -face palm-<br>
+				    				</i>
+				    				
+				    				<br>
+
+				    				Even after telling them that I am a CE major repeatedly, they make the same mistake. I have had this conversation way too many times and it has come to a point where I say "Yea I am a Computer Science major." I think they seem to think that the two are equivalent because they both have the word "computer" in them. The majority of these people that always makes this misconception is either an older person or someone who is not a techy  which I guess makes sense. So yea, you will always see me at family dinners trying to explain this to a relative or at social gatherings saying that I am a CS major just to make things easy to remember.<br>
+
+				    				<br>
+
+				    				Well then, let me clarify the distinction. <br>
+
+				    				<br>
+
+				    				<u>Computer Engineering</u> <br>
+				    				It is the study of electrical and software design to create new, better computer <strong style="color: #00BEBE">hardware</strong> and software. This could be making better processors, working on computer architecture, or even implementing the structure of an operating system. Computer Engineering is a very diverse, intensive field because you not only have to know the software side of things, but also the low level technical side. <br> 
+
+				    				<br>
+
+				    				<u>Computer Science</u> <br>
+				    				The study of software design and theoretical concepts of computation. Basically, it deals more with the software side. Some computer scientists focus on speeding up their programs for better performance or try and find better ways to store information. They usually look at things from a higher perspective, while Computer Engineers look more towards the lower end of the spectrum.<br> 
+
+				    				<br>
+
+				    				<u>Overall</u><br>
+				    				I guess in caveman terms: CE = hardware + software, CS = software. Both fields are very interesting and overlap in many ways. Although it can be a pain when your friends or family do not know what you do, you cannot really blame them, especially if they are not in it. I hope that this clarified some things about the difference between CS and CE majors.
+
+				    			</p>
+				    		</div>
+				    	</div>
+				    	<div class="extra content">
+				    		<i class="user icon"></i>Steven
+				    	</div>
+			    	</div>	
+			    </div>
+			</div>
+		    <div class="row">
+		    	<div class="column">
+			    	<div class="ui card hello widthRule">
+				  		<div class="content" style="text-align: start">
+				    		<div class="header headerRule">
+				    			<h2>Hello World, first post</h2>
+				    		</div>
+							<div class="meta">
+								August 19th, 2015
 							</div>
-							11. Run the code<br>
-							12. Go back to the link from the first step and hit the test button to ensure that something sent to Parse.<br>
-							13. That's it! Your application should be connected to Parse now. Happy Coding.
-		    			</p>
-		    		</div>
+				    		<div class="description">
+				    			<p>Welcome to my site! I will be posting more content shortly. I am still building the site so I have
+				    				not been able to focus my energies on other projects. Once this site is done, I will probably
+				    				start posting projects and tutorials. Keep checking for updates.</p>
+				    		</div>
+				    	</div>
+				    	<div class="extra content">
+				    		<i class="user icon"></i>Steven
+				    	</div>	
+			    	</div>
 		    	</div>
-		    	<div class="extra content">
-		    		<i class="user icon"></i>Steven
-		    	</div>	
-		    </div>
-
-			<div class="ui card mc" style="width: 100%">
-		  		<div class="content" style="text-align: start">
-		    		<div class="header headerRule">
-		    			<h2>Common Misconception #1</h2>
-		    		</div>
-					<div class="meta">
-						August 26rd, 2015
-					</div>
-		    		<div class="description">
-		    			<p>
-		    				One of the most common misconceptions that people get confused about my major is the difference between Computer Science (CS) and Computer Engineering (CE).<br> 
-		    				Here is how a typical conversation goes:<br>
-
-		    				<br>
-
-		    				<i>Person: What is your major?<br>
-			    				Me: Computer Engineering<br>
-			    				Person: Oh so you are a Computer Science major?<br>
-			    				Me: No I am a Computer Engineering major<br>
-			    				Person: Thats the same thing right?<br>
-			    				Me: No its not. Computer Engineering involves hardware and software, while Computer Science is just software<br>
-			    				Person: Oh I see
-
-			    				(End of conversation)<br>
-		    				<br>
-
-		    				(See same person again and somehow the conversation steers towards majors)<br>
-		    				Person: How is Computer Science?<br>
-		    				Me: -face palm-<br>
-		    				</i>
-		    				
-		    				<br>
-
-		    				Even after telling them that I am a CE major repeatedly, they make the same mistake. I have had this conversation way too many times and it has come to a point where I say "Yea I am a Computer Science major." I think they seem to think that the two are equivalent because they both have the word "computer" in them. The majority of these people that always makes this misconception is either an older person or someone who is not a techy  which I guess makes sense. So yea, you will always see me at family dinners trying to explain this to a relative or at social gatherings saying that I am a CS major just to make things easy to remember.<br>
-
-		    				<br>
-
-		    				Well then, let me clarify the distinction. <br>
-
-		    				<br>
-
-		    				<u>Computer Engineering</u> <br>
-		    				It is the study of electrical and software design to create new, better computer <strong style="color: #3399FF">hardware</strong> and software. This could be making better processors, working on computer architecture, or even implementing the structure of an operating system. Computer Engineering is a very diverse, intensive field because you not only have to know the software side of things, but also the low level technical side. <br> 
-
-		    				<br>
-
-		    				<u>Computer Science</u> <br>
-		    				The study of software design and theoretical concepts of computation. Basically, it deals more with the software side. Some computer scientists focus on speeding up their programs for better performance or try and find better ways to store information. They usually look at things from a higher perspective, while Computer Engineers look more towards the lower end of the spectrum.<br> 
-
-		    				<br>
-
-		    				<u>Overall</u><br>
-		    				I guess in caveman terms: CE = hardware + software, CS = software. Both fields are very interesting and overlap in many ways. Although it can be a pain when your friends or family do not know what you do, you cannot really blame them, especially if they are not in it. I hope that this clarified some things about the difference between CS and CE majors.
-
-		    			</p>
-		    		</div>
-		    	</div>
-		    	<div class="extra content">
-		    		<i class="user icon"></i>Steven
-		    	</div>	
-		    </div>
-
-			<div class="ui card hello" style="width: 100%">
-		  		<div class="content" style="text-align: start">
-		    		<div class="header headerRule">
-		    			<h2>Hello World, first post</h2>
-		    		</div>
-					<div class="meta">
-						August 19th, 2015
-					</div>
-		    		<div class="description">
-		    			<p>Welcome to my site! I will be posting more content shortly. I am still building the site so I have
-		    				not been able to focus my energies on other projects. Once this site is done, I will probably
-		    				start posting projects and tutorials. Keep checking for updates.</p>
-		    		</div>
-		    	</div>
-		    	<div class="extra content">
-		    		<i class="user icon"></i>Steven
-		    	</div>	
-		    </div>
-		</div>
+		    </div>		
+		</div>		
+		<br>
+	    <br>  
     </center>			
 
     <br>

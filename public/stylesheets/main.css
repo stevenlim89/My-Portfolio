@@ -19,7 +19,7 @@ body, html{
 }
 
 #menu, #menu .item{
-    color: black;
+    color: #404040;
     border-bottom-color: #ECECEC
 }
 
@@ -29,11 +29,12 @@ body, html{
 }
 
 .widthRule{
-    width: 85% !important
+    width: 85% !important;
+    height: 100% !important;
 }
 
 .headerRule{
-    color: #3399FF !important
+    color: #00BEBE !important
 }
 
 /*
@@ -71,6 +72,12 @@ body, html{
 .homeButtons > .icon{
     opacity: 1 !important;
 }
+
+#wordFlip{
+    font-size: 40px; 
+    letter-spacing: 10px; 
+    text-align: center
+}
 /*
  * About Me
  */
@@ -83,6 +90,7 @@ body, html{
     text-align: start; 
     font-size: 20px;
     padding-left: 10%;
+    color: #404040
 }
 
 /*
@@ -113,7 +121,7 @@ body, html{
 }
 
 .ui.fluid.selection.dropdown .selected.item, .text{
-    color: #3399FF;
+    color: #00BEBE;
 }
 
 @media only screen and (max-device-width: 480px) {

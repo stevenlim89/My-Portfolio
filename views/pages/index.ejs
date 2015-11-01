@@ -10,10 +10,10 @@
         <div class = "ui compact segment" id="nameSegment">
             <p id="nametag">Steven Lim</p>
             <p style="font-size: 20px; letter-spacing: 10px; text-align: center; display: inline-block">I am a </p>
-            <p id="wordFlip" style="font-size: 40px; letter-spacing: 10px; text-align: center"> Student</p>
+            <p id="wordFlip"> Student</p>
         </div>
         <br>
-        <div class="ui grid" style="width: 50%">
+        <div class="ui grid" style="width: 50%" id="gridIndex">
             <div class="row">
                 <div class="column" style="width: 25%">
                     <a class="ui circular facebook icon button homeButtons" data-content="Facebook" href="https://www.facebook.com/stevenlim89">
@@ -46,6 +46,11 @@
     $('#menu, #menu .item').css("border-bottom-color", "#00BEBE");
     $('.ui.secondary.pointing.menu .active').attr("style", "border-color: white !important; color: white !important");
 
+    $('#gridIndex').transition({
+        animation: 'fly right in',
+        duration: '3s'
+    });
+
     $('.homeButtons')
           .popup({
               hoverable: true
@@ -55,7 +60,7 @@
     var counter = 0;
     var textArray = ["Developer", "Techy", "Entrepeneur", "Nerd", "Problem Solver", "Student"];
 
-    setInterval(function () { changeWord() }, 3000);
+    setInterval(function () { changeWord() }, 5000);
 
     function changeWord(){
         $('#wordFlip').transition({
