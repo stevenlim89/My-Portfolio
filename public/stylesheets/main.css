@@ -96,18 +96,10 @@ body, html{
  * Project page elements
  */
 
-.bannerContainer{
-    width: 100% !important; 
-    background-color: #404040 !important; 
-    height: 300px !important;
-    margin: 0 !important;
-}
-
-.icon.header.notHome{
-    visibility: hidden;
-    color: white; 
-    padding-top: 50px; 
-    font-size: 300%
+#projectHeader{
+    font-family: Manifesto; 
+    font-size: 80px; 
+    letter-spacing: 30px
 }
 
 /*
@@ -127,8 +119,15 @@ body, html{
     .ui.horizontal.fluid.tabular.menu{
         font-size: .75rem
     }
-
 }
+
+#blogHeader{
+    font-family: Manifesto; 
+    font-size: 80px; 
+    letter-spacing: 10px
+}    
+
+
 
 
 

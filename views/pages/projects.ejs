@@ -11,7 +11,7 @@
 	<br>
 
 	<center>
-		<h1 style="font-family: Manifesto; font-size: 80px; letter-spacing: 30px">
+		<h1 id="projectHeader">
 			My Work
 		</h1>
 		<p style="width: 50%; text-align: start">Below you will find some of the things I have been working on. I hope you enjoy it! Source code is provided, courtesy of Github.</p>
@@ -93,9 +93,9 @@
 	$(document).ready(function(){
 		document.getElementById("menu").style.marginBottom = "0px";
 
-		$('.ui.icon.header').transition({
-			animation: 'slide left',
-			duration: '2s'
+		$('#projectHeader').transition({
+			animation: 'fade in',
+            duration: '5s'
 		});
 
 		var imageList = document.getElementById('imageListPro');

@@ -9,7 +9,7 @@
 
 	<center>
 		<br>
-		<h1 style="font-family: Manifesto; font-size: 80px; letter-spacing: 10px">
+		<h1 id="blogHeader">
 			Let's Discuss
 		</h1>
 		<p style="width: 50%; text-align: start">Here I will discuss certain topics and provide tutorials for things that I had trouble with. Hopefully you will find the blog posts enlightening and the tutorials helpful!</p>
@@ -216,6 +216,11 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		document.getElementById("menu").style.marginBottom = "0px";
+
+		$('#blogHeader').transition({
+			animation: 'fade in',
+            duration: '5s'
+		});
 
 		var tutorials = document.getElementsByClassName('tutorial');
 		var misconceptions = document.getElementsByClassName('mc');
