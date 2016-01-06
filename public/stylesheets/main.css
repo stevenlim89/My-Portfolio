@@ -92,6 +92,16 @@ body, html{
     color: #404040
 }
 
+#aboutMeRow{
+    width: 40% !important; 
+}
+
+#aboutMeRow2{
+    width: 60% !important; 
+    padding-top: 2% !important; 
+    padding-left: 15% !important
+}
+
 /*
  * Project page elements
  */
@@ -115,17 +125,79 @@ body, html{
     color: #00BEBE;
 }
 
-@media only screen and (max-device-width: 480px) {
-    .ui.horizontal.fluid.tabular.menu{
-        font-size: .75rem
-    }
-}
-
 #blogHeader{
     font-family: Manifesto; 
     font-size: 80px; 
     letter-spacing: 10px
-}    
+}
+
+#greetings{
+    font-family: Manifesto; 
+    font-size: 50px; 
+    margin-left: -10px
+} 
+
+@media only screen and (max-device-width: 768px) {
+    .ui.secondary.pointing.menu .item{
+        font-size: 0.825rem !important
+    }
+
+    #nametag{
+        font-family: Manifesto; 
+        font-size: 50px; 
+        margin-top: 12%;
+        margin-bottom: 0;
+        letter-spacing: 10px;
+    }
+
+    #gridIndex{
+        width: 75% !important;
+    }
+
+    .homeButtons{
+        font-size: 1.5rem !important;
+        background-color: #00BEBE !important;
+        border-width: 5px !important;
+        border-color: white !important;
+        box-shadow: 0 0 0 3px #f9fafb inset !important;
+        color: white !important;
+    }
+
+    #wordFlip{
+        font-size: 40px; 
+        letter-spacing: 5px; 
+        text-align: center
+    }
+
+    #aboutMeId{
+        padding-left: 5%
+    }
+    #aboutMeRow{
+        width: 100% !important; 
+    }
+
+    #aboutMeRow2{
+        width: 100% !important; 
+        padding-top: 2% !important; 
+        padding-left: 0% !important
+    }
+
+    #projectHeader{
+        font-family: Manifesto; 
+        font-size: 50px; 
+        letter-spacing: 30px
+    }
+
+    .widthRule{
+        width: 90% !important
+    }
+
+    #blogHeader{
+        font-family: Manifesto; 
+        font-size: 50px; 
+        letter-spacing: 10px
+    }
+}   
 
 
 
