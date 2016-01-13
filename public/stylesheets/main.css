@@ -145,7 +145,7 @@ body, html{
 
 @media only screen and (max-device-width: 768px) {
     .ui.secondary.pointing.menu .item{
-        font-size: 0.825rem !important
+        font-size: 0.725rem !important
     }
 
     #nametag{
