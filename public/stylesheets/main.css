@@ -112,6 +112,12 @@ body, html{
     color: #00BEBE;
 }
 
+#projectHeader h1{
+    font-size: 80px; 
+    letter-spacing: 30px; 
+    font-family: Manifesto;
+}
+
 /*
  * Blog page elements
  */
@@ -129,6 +135,12 @@ body, html{
     background-color: #4D505B;
     padding: 5%;
     color: #00BEBE;
+}
+
+#blogHeader h1{
+    font-size: 80px; 
+    letter-spacing: 10px; 
+    font-family: Manifesto;
 }
 
 #greetings{
@@ -183,20 +195,20 @@ body, html{
         padding-left: 0% !important
     }
 
-    #projectHeader{
-        font-family: Manifesto; 
-        font-size: 50px !important; 
-        letter-spacing: 30px !important
+    #projectHeader h1{
+        font-size: 50px; 
+        letter-spacing: 30px; 
+        font-family: Manifesto;
     }
 
     .widthRule{
         width: 90% !important
     }
 
-    #blogHeader{
-        font-family: Manifesto; 
-        font-size: 50px !important; 
-        letter-spacing: 10px !important
+    #blogHeader h1{
+        font-size: 50px; 
+        letter-spacing: 10px; 
+        font-family: Manifesto;
     }
 }   
 
